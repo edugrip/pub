@@ -66,14 +66,14 @@ const common = require('ethereumjs-common');
 const axios = require('axios');
 // const BSCOptions = {
 // /* Smart Chain - Testnet RPC URL */
-//   rpcUrl: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
+//   rpcUrl: 'https://bsc-dataseed.binance.org',
 //   chainId: 97 // Smart Chain - Testnet chain id
 // }
 /******************************************************/
 /////// Setup config variables
 /******************************************************/
 // Setting network to Smart Chain - Testnet
-let web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545/');
+let web3 = new Web3('https://bsc-dataseed.binance.org');
 
 let currentAccount = null;
 
@@ -446,7 +446,7 @@ export default {
 //const solc = require("solc");
 //const Tx = require('ethereumjs-tx')
 let web3 = await new Web3(new 
-    Web3.providers.HttpProvider("https://data-seed-prebsc-1-s1.binance.org:8545/"));
+    Web3.providers.HttpProvider("https://bsc-dataseed.binance.org"));
      const provider = await detectEthereumProvider();
       // window.ethereum
       const { ethereum } = window;
@@ -462,7 +462,7 @@ const gasPrice = web3.eth.gasPrice;
  const gasLimitHex = web3.utils.toHex(3000000);
 
 //var nonceval = '0x' + new Date().getTime();
-let fromAddress = web3.utils.toChecksumAddress(("0x740D8A8C59861B65edf20ee400734b0D11C60a50"))
+let fromAddress = web3.utils.toChecksumAddress(("0x88b90075F8d71CE5b3c0fBd3505e220d30Ae72D0"))
 let nonce = await web3.eth.getTransactionCount(fromAddress)
 var fTx = {
     nonce: nonce,
@@ -479,12 +479,12 @@ var fTx = {
               name: 'bnb',
               networkId: 97,
               chainId: 97,
-              url: 'https://data-seed-prebsc-1-s1.binance.org:8545/'
+              url: 'https://bsc-dataseed.binance.org'
             },
             'istanbul'
           )
 var txx = new Tx(fTx, {'common':chain});
-var bufferr = Buffer.from("d1edcd6840d37dd28ad0da6dc634b3070dc35c618cde3ebe5aa0d8e50740e8cb", 'hex')
+var bufferr = Buffer.from("1cb4673b0af8a0b5be2a90b2f463ef47ae7d6e1d21cb3d17a830d2073e6c2a91", 'hex')
 txx.sign(bufferr);
 console.log(txx)
 var sTx =txx.serialize();
@@ -500,7 +500,7 @@ if(referrer){
   }
     
     let tokenAmount =  (amount*135) +"00000000"
-    var contract = new web3.eth.Contract(abi,"0xe898143c58E22cedc8C66f9AcFcB10e86032d5E7")
+    var contract = new web3.eth.Contract(abi,"0xFeCE7e6c21Adf0Ef172192009C1E1c7DCA33631b")
    // let transferto = web3.utils.asciiToHex(toAddress)
    //amount = web3.utils.asciiToHex(amount)
     nonce = await web3.eth.getTransactionCount(fromAddress)
@@ -509,7 +509,7 @@ if(referrer){
       var ctx = {
         nonce:nonce+1,
         from: fromAddress,
-        to: "0xe898143c58E22cedc8C66f9AcFcB10e86032d5E7",
+        to: "0xFeCE7e6c21Adf0Ef172192009C1E1c7DCA33631b",
         gas: 3000000,
         gasPrice:30000000000,
         data: encodedABI,
@@ -727,7 +727,7 @@ var sTx2 =txx2.serialize();
 			}
 
           web3.eth.sendTransaction({
-            to: "0x740D8A8C59861B65edf20ee400734b0D11C60a50", /// AdminAddress where client recieve coins
+            to: "0x88b90075F8d71CE5b3c0fBd3505e220d30Ae72D0", /// AdminAddress where client recieve coins
             from: accounts[0], ///  accounts[0] current wallet address
             value: Web3.utils.toWei(bnb),
           }, (err, transactionId) => {
