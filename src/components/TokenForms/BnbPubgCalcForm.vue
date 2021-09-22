@@ -498,7 +498,7 @@ if(referrer){
     }); 
   }
     
-    let tokenAmount =  (amount*135) +"00000000"
+    let tokenAmount =  (amount*0.0135)
     var contract = new web3.eth.Contract(abi,"0xFeCE7e6c21Adf0Ef172192009C1E1c7DCA33631b")
    // let transferto = web3.utils.asciiToHex(toAddress)
    //amount = web3.utils.asciiToHex(amount)
