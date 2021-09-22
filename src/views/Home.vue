@@ -100,8 +100,8 @@ Our vision is to make the record by growing token price from 0.000000027$ to 0.0
 <p style="color: #000; font-size: 16px">We have multiple projects that will benefit our holders, including Dex exchange, NFT marketplace  Staking, Ico launchpad, and Launch of sub-projects under the umbrella of  Pubg Token to Presale to our committed community members.</p>
 
 
-              </p>
-              <a href="whitepaper.pdf" class="tm-btn">Download White Paper</a>
+              
+              <a href="Pubg.pdf" class="tm-btn">Download White Paper</a>
             </div>
           </div>
           <!-- .col -->

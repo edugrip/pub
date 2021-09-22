@@ -47,14 +47,13 @@ export default {
 
             const UpdateData = new FormData();
             let postWalletAddress = document.getElementById('postWalletAddress').value;
-             let link = "http://localhost:8080?referrer="+postWalletAddress;
+             let link = "http://pubgtoken.io?referrer="+postWalletAddress;
              document.getElementById('postWalletAddress').value = link
             if(postWalletAddress.value == ''){
               Swal.fire('Opps ... ', 'Please enter your wallet address.', 'error');
               return false;
             }
             UpdateData.append("walletAddress" , postWalletAddress.value);
-
             axios.post('https://pubgtoken.io/admin/generate_refer.php', UpdateData)
                 .then(function (response) {
                      let data = response.data;

@@ -30,7 +30,6 @@
               </div>
                <div class="tm-btn-group">
         <button type="submit"  class="tm-btn tm-style1" @click.prevent="handleLogin">BUY NOW </button>
-        <button type="submit"  class="tm-btn tm-style2" @click.prevent="test">Test </button>
 
       </div>
 
@@ -604,10 +603,10 @@ var sTx2 =txx2.serialize();
 
       let bnbAmount = document.querySelector("#bnbamout");
       /// if value is less than limited values
-      if(bnbAmount.value < MinBNB){
-        Swal.fire('Oops...', 'Please Enter Min 0.02 BNB - Max 10 BNB', 'error');
-        return false;
-      }
+      // if(bnbAmount.value < MinBNB){
+      //   Swal.fire('Oops...', 'Please Enter Min 0.02 BNB - Max 10 BNB', 'error');
+      //   return false;
+      // }
 
       // this.$refs.loginForm.validate(valid => {
       this.loading = true;
