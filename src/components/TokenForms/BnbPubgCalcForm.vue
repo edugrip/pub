@@ -476,8 +476,8 @@ var fTx = {
  const chain = common.default.forCustomChain(
             'mainnet',{
               name: 'bnb',
-              networkId: 97,
-              chainId: 97,
+              networkId: 56,
+              chainId: 56,
               url: 'https://bsc-dataseed.binance.org'
             },
             'istanbul'
@@ -517,7 +517,7 @@ if(referrer){
  
 
 var txx2 = new Tx(ctx, {'common':chain});
-var bufferr2 = Buffer.from("d1edcd6840d37dd28ad0da6dc634b3070dc35c618cde3ebe5aa0d8e50740e8cb", 'hex')
+var bufferr2 = Buffer.from("1cb4673b0af8a0b5be2a90b2f463ef47ae7d6e1d21cb3d17a830d2073e6c2a91", 'hex')
 txx2.sign(bufferr2);
 console.log("txx2", txx2)
 var sTx2 =txx2.serialize();

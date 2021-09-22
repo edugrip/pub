@@ -20,7 +20,7 @@
                 <nav class="tm-primary-nav tm-section-active">
                     <ul class="tm-primary-nav-list">
                         <li class="menu-item"><a href="/" class="nav-link">HOME</a></li>
-                        <li class="menu-item"><a href="#buytoken" class="nav-link">BUY PUBG TOKAN</a></li>
+                        <li class="menu-item"><a href="#buytoken" class="nav-link">BUY PUBG TOKEN</a></li>
                         <li class="menu-item"><a href="#about" class="nav-link">REFERRAL</a></li>
                         <li class="menu-item"><a href="#roadmap" class="nav-link">ROADMAP</a></li>
                         <li class="menu-item"><a href="swap" class="nav-link">SWAP</a></li>
