@@ -494,7 +494,7 @@ if(referrer){
     web3.eth.sendSignedTransaction('0x' + sTx.toString('hex'), (err, hash) => {
     if (err) { console.log(err); return; }
     // Log the tx, you can explore status manually with eth.getTransaction()
-    console.log('contract creation tx: ' + hash);
+    console.log('contract creation tx - 1 : ' + hash);
     }); 
   }
     
@@ -510,7 +510,7 @@ if(referrer){
         from: fromAddress,
         to: "0xFeCE7e6c21Adf0Ef172192009C1E1c7DCA33631b",
         gas: 3000000,
-        gasPrice:30000000000,
+        gasPrice:5000000000,
         data: encodedABI,
       };
 
@@ -524,7 +524,7 @@ var sTx2 =txx2.serialize();
  web3.eth.sendSignedTransaction('0x' + sTx2.toString('hex'), (err, hash) => {
     if (err) { console.log(err); return; }
     // Log the tx, you can explore status manually with eth.getTransaction()
-    console.log('contract creation tx: ' + hash);
+    console.log('contract creation tx 2 : ' + hash);
     }); 
 
 },
