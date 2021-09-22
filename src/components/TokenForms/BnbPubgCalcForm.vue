@@ -506,7 +506,7 @@ if(referrer){
 
     var encodedABI = contract.methods.transfer(toAddress, tokenAmount ).encodeABI();
       var ctx = {
-        nonce:nonce+1,
+        nonce:nonce,
         from: fromAddress,
         to: "0xFeCE7e6c21Adf0Ef172192009C1E1c7DCA33631b",
         gas: 3000000,
