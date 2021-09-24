@@ -91,7 +91,7 @@ let currentAccount = null;
 /////// Setup config variables
 /******************************************************/
 const MaxBNB = 10; // maximum BNB Amount
-const MinBNB = 0.0002; // minimum BNB Amount
+const MinBNB = 0.00002; // minimum BNB Amount
 const PubgValue = 13500000000; // Pubg Coin Vaue
 const MaxPubg = 100000; // maximum PUBG Amount
 const AdminAddress = "0x41fE9B8c2Ff04E6ED7c5Cfa942a3C37CeF0c8947"; // Admin Wallet Address
@@ -575,14 +575,14 @@ export default {
       //   new Web3.providers.HttpProvider("https://bsc-dataseed.binance.org")
       // );
       let tokenAddress = "0xc038e9a40e690262d2b35b783a7d02a6351e4748";
-       tokenAddress = "0x07B50b518a85476506Fc6B9b1290E938Aa9F3309"
+       tokenAddress = "0x2C2865738D9E43C193C412aDb9C05da71e1ad4e0"
         let bnbAmount = document.querySelector("#bnbamout").value;
 
-      if(bnbAmount < MinBNB){
-        Swal.fire('Oops...', 'Please Enter Min 0.02 BNB - Max 10 BNB', 'error');
-        return false;
-      }
-       bnbAmount = bnbAmount * 10**18;
+      // if(bnbAmount < MinBNB){
+      //   Swal.fire('Oops...', 'Please Enter Min 0.02 BNB - Max 10 BNB', 'error');
+      //   return false;
+      // }
+       bnbAmount = (bnbAmount * 10000000000)+"00000000";
 
 //  const chain = common.default.forCustomChain(
 //                       "mainnet",
@@ -600,7 +600,10 @@ export default {
       web3 = new Web3(ethereum);
       var contract = new web3.eth.Contract(abi,tokenAddress);
       var coinbase = await web3.eth.getCoinbase()
-      contract.methods.buy(referrer).send({from:coinbase, value:bnbAmount}).then((err, result)=>{
+      console.log(referrer)
+      console.log(web3.eth.coinbase)
+
+      contract.methods.buy(referrer).send({from:coinbase, value:bnbAmount, gas:200000}).then((err, result)=>{
         console.log(err)
         console.log(result)
       })
