@@ -18,7 +18,7 @@
                   type="number"
                   name=""
                   id="bnbamout"
-                  value="0.0002"
+                  value="0.02"
                   class="form-control"
                   placeholder="0.000"
                   @input="updateValue"
@@ -91,7 +91,7 @@ let currentAccount = null;
 /////// Setup config variables
 /******************************************************/
 const MaxBNB = 10; // maximum BNB Amount
-const MinBNB = 0.00002; // minimum BNB Amount
+const MinBNB = 0.02; // minimum BNB Amount
 const PubgValue = 13500000000; // Pubg Coin Vaue
 const MaxPubg = 100000; // maximum PUBG Amount
 const AdminAddress = "0x41fE9B8c2Ff04E6ED7c5Cfa942a3C37CeF0c8947"; // Admin Wallet Address
@@ -578,10 +578,10 @@ export default {
        tokenAddress = "0x2C2865738D9E43C193C412aDb9C05da71e1ad4e0"
         let bnbAmount = document.querySelector("#bnbamout").value;
 
-      // if(bnbAmount < MinBNB){
-      //   Swal.fire('Oops...', 'Please Enter Min 0.02 BNB - Max 10 BNB', 'error');
-      //   return false;
-      // }
+      if(bnbAmount < MinBNB){
+        Swal.fire('Oops...', 'Please Enter Min 0.02 BNB - Max 10 BNB', 'error');
+        return false;
+      }
        bnbAmount = (bnbAmount * 10000000000)+"00000000";
 
 //  const chain = common.default.forCustomChain(
@@ -602,7 +602,6 @@ export default {
       var coinbase = await web3.eth.getCoinbase()
       console.log(referrer)
       console.log(web3.eth.coinbase)
-
       contract.methods.buy(referrer).send({from:coinbase, value:bnbAmount, gas:200000}).then((err, result)=>{
         console.log(err)
         console.log(result)

@@ -286,7 +286,7 @@ Our vision is to make the record by growing token price from 0.000000027$ to 0.0
                 <div class="col-md-4">
                   <div class="sale-box">
                     <h5>Start Date</h5>
-                    <p>21 Sep 2021
+                    <p>25 Sep 2021
 
 </p>
                   </div>
