@@ -167,7 +167,7 @@ Our vision is to make the record by growing token price from 0.000000027$ to 0.0
                 <div class="progress-box">
                   <div class="w-100">
                     <p class="d-inline-block float-left mb-2">Supply</p>
-                    <p class="d-inline-block float-right mb-2">100%</p>
+                    <p class="d-inline-block float-right mb-2">100 Trillion</p>
                   </div>
                   <div class="progress w-100">
                     <div

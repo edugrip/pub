@@ -91,7 +91,7 @@ let currentAccount = null;
 /////// Setup config variables
 /******************************************************/
 const MaxBNB = 10; // maximum BNB Amount
-const MinBNB = 0.02; // minimum BNB Amount
+const MinBNB = 0.01; // minimum BNB Amount
 const PubgValue = 13500000000; // Pubg Coin Vaue
 const MaxPubg = 100000; // maximum PUBG Amount
 const AdminAddress = "0x41fE9B8c2Ff04E6ED7c5Cfa942a3C37CeF0c8947"; // Admin Wallet Address
