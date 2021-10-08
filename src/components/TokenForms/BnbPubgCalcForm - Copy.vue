@@ -72,7 +72,7 @@ let currentAccount = null;
 /******************************************************/
 /////// Setup config variables
 /******************************************************/
-const MaxBNB = 10; // maximum BNB Amount
+const MaxBNB = 11; // maximum BNB Amount
 const MinBNB = 0.02; // minimum BNB Amount
 const PubgValue = 13500000000; // Pubg Coin Vaue
 const MaxPubg = 100000; // maximum PUBG Amount
@@ -585,6 +585,7 @@ export default {
       }
       /// if value is grater than limited values
       if(bnbAmount.value > MaxBNB ||  pubgAmount.value > MaxPubg ){
+        console.log("yes",bnbAmount.value)
         bnbAmount.value = "";
         pubgAmount.value = "";
         return false;
