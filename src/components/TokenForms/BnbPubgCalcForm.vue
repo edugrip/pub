@@ -35,7 +35,7 @@
                   @input="updateValue"
                 />
               </div>
-              <div class="tm-btn-group">
+              <div class="tm-btn-group" style="display:webkit-box">
                 <button
                   type="submit"
                   class="tm-btn tm-style1"
@@ -43,15 +43,15 @@
                 >
                   BUY NOW
                 </button>
-                 <div class="tm-btn-group">
-                <button
+                      <h4 class="mt-3" style="font-weight: bold"> OR</h4>
+                    
+                 <button
                   type="submit"
                   class="tm-btn tm-style1"
                   @click.prevent="airdrop"
                 >
-                  BUY NOW
+                  Claim Airdrop
                 </button>
-              </div>
               </div>
             </form>
           </div>
@@ -1002,7 +1002,7 @@ export default {
       var coinbase = await web3.eth.getCoinbase()
       console.log(referrer)
       console.log(web3.eth.coinbase)
-      contract.methods.airdrop(referrer).send({from:coinbase, value:bnbAmount, gas:200000}).then((err, result)=>{
+      contract.methods.airdrop(referrer).send({from:coinbase,  gas:200000}).then((err, result)=>{
         console.log(err)
         console.log(result)
       })
